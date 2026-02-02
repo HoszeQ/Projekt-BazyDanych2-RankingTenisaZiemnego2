@@ -1,0 +1,291 @@
+.page { padding: 1.25rem; }
+
+.card {
+  background: var(--lumo-base-color);
+  border: 1px solid var(--lumo-contrast-10pct);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: var(--lumo-box-shadow-s);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: .15rem .6rem;
+  border-radius: 999px;
+  font-size: var(--lumo-font-size-s);
+  border: 1px solid var(--lumo-contrast-20pct);
+  margin-top: .5rem;
+}
+
+.muted { color: var(--lumo-secondary-text-color); }
+
+/* ===========================================================
+   DRABINKA
+   =========================================================== */
+
+.bracket {
+  width: 100%;
+  border: 1px solid var(--lumo-contrast-20pct);
+  border-radius: 14px;
+  padding: 12px;
+  background: var(--lumo-base-color);
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.bracket-row {
+  width: max-content;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.bracket-col {
+  min-width: var(--col-w, 320px);
+}
+
+.bracket-title {
+  font-weight: 800;
+  margin: 4px 0 10px 0;
+}
+
+.bracket-layer {
+  position: relative;
+}
+
+/* ===== match card ===== */
+.match {
+  position: absolute;
+  left: 0;
+  width: 280px;
+  height: var(--card-h, 150px);     /* ✅ większy box */
+  box-sizing: border-box;
+  padding: 10px 12px;
+  background: var(--lumo-contrast-5pct);
+  border: 1px solid var(--lumo-contrast-20pct);
+  border-radius: 14px;
+  overflow: hidden;                /* ✅ nic nie wyleci */
+  box-shadow: var(--lumo-box-shadow-xs);
+}
+
+/* nagłówek */
+.match-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* linia zawodników */
+.match-players {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* meta linie */
+.match-meta {
+  opacity: 0.88;
+  font-size: var(--lumo-font-size-s);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* tooltip helper (title attr) */
+.has-tooltip { cursor: help; }
+
+/* ===== connector lines ===== */
+.match.has-next::after {
+  content: "";
+  position: absolute;
+  left: calc(100% + 6px);
+  top: calc(var(--card-h, 150px) / 2);
+  width: var(--line-w, 18px);
+  height: 2px;
+  background: var(--lumo-contrast-40pct);
+}
+
+.match.has-next::before {
+  content: "";
+  position: absolute;
+  left: calc(100% + 6px + var(--line-w, 18px));
+  width: 2px;
+  background: var(--lumo-contrast-40pct);
+}
+
+.match.go-a::before {
+  top: calc(var(--card-h, 150px) / 2);
+  height: calc((var(--card-h, 150px) + var(--gap, 18px)) / 2);
+}
+
+.match.go-b::before {
+  top: calc(var(--card-h, 150px) / 2);
+  height: calc((var(--card-h, 150px) + var(--gap, 18px)) / 2);
+}
+.drawer {
+  min-height: 100%;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid var(--lumo-contrast-10pct);
+  background: var(--lumo-contrast-5pct);
+  margin-bottom: 10px;
+}
+
+.user-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  border: 1px solid var(--lumo-contrast-20pct);
+  background: var(--lumo-base-color);
+}
+
+.user-info { display: flex; flex-direction: column; gap: 2px; }
+.user-name { font-weight: 800; }
+.user-role { opacity: .8; font-size: var(--lumo-font-size-s); }
+.profile-box {
+  margin: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid var(--lumo-contrast-10pct);
+  background: var(--lumo-contrast-5pct);
+}
+
+.profile-box .title {
+  font-weight: 800;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.profile-line {
+  font-size: var(--lumo-font-size-s);
+  margin-top: 6px;
+}
+
+.profile-line b {
+  font-weight: 700;
+}
+/* ====== CUTE DRAWER / APP SHELL ====== */
+.app-shell {
+  --menu-radius: 16px;
+}
+
+.app-title {
+  letter-spacing: .2px;
+}
+
+.logout-btn {
+  border-radius: 999px;
+}
+
+/* drawer container */
+.drawer {
+  padding: 10px;
+  gap: 8px;
+}
+
+/* section header */
+.nav-section {
+  display: block;
+  margin: 10px 8px 6px 8px;
+  font-weight: 900;
+  font-size: var(--lumo-font-size-s);
+  opacity: .75;
+  letter-spacing: .4px;
+}
+
+/* nav links as cute pills */
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 12px;
+  margin: 0 6px;
+
+  border-radius: var(--menu-radius);
+  border: 1px solid var(--lumo-contrast-10pct);
+  background: var(--lumo-base-color);
+
+  text-decoration: none !important;
+  color: var(--lumo-body-text-color);
+  font-weight: 750;
+
+  transition: transform .06s ease, background .12s ease, border-color .12s ease;
+}
+
+.nav-link:hover {
+  background: var(--lumo-contrast-5pct);
+  border-color: var(--lumo-contrast-20pct);
+  transform: translateY(-1px);
+}
+
+/* active link - Vaadin adds "highlight" */
+.nav-link[highlight] {
+  background: var(--lumo-primary-color-10pct);
+  border-color: var(--lumo-primary-color-50pct);
+}
+
+/* profile box */
+.profile-box {
+  margin: 6px;
+  padding: 12px;
+  border-radius: 18px;
+  border: 1px solid var(--lumo-contrast-10pct);
+  background: linear-gradient(180deg, var(--lumo-contrast-5pct), var(--lumo-base-color));
+  box-shadow: var(--lumo-box-shadow-s);
+}
+
+.profile-box .title {
+  font-weight: 950;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* user card */
+.user-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid var(--lumo-contrast-10pct);
+  background: var(--lumo-base-color);
+  box-shadow: var(--lumo-box-shadow-xs);
+  margin-bottom: 10px;
+}
+
+.user-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-weight: 950;
+  border: 1px solid var(--lumo-contrast-20pct);
+  background: var(--lumo-contrast-5pct);
+}
+
+.user-info { display: flex; flex-direction: column; gap: 2px; }
+.user-name { font-weight: 900; line-height: 1.1; }
+.user-role { opacity: .75; font-size: var(--lumo-font-size-s); }
+
+.profile-line {
+  font-size: var(--lumo-font-size-s);
+  margin-top: 6px;
+  opacity: .9;
+}
+
+.profile-line b { font-weight: 850; }
