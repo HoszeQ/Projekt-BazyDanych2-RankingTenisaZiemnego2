@@ -59,13 +59,13 @@
   position: absolute;
   left: 0;
   width: 280px;
-  height: var(--card-h, 150px);     /* ✅ większy box */
+  height: var(--card-h, 150px);     /*  większy box */
   box-sizing: border-box;
   padding: 10px 12px;
   background: var(--lumo-contrast-5pct);
   border: 1px solid var(--lumo-contrast-20pct);
   border-radius: 14px;
-  overflow: hidden;                /* ✅ nic nie wyleci */
+  overflow: hidden;                /*  nic nie wyleci */
   box-shadow: var(--lumo-box-shadow-xs);
 }
 
@@ -177,7 +177,7 @@
 .profile-line b {
   font-weight: 700;
 }
-/* ====== CUTE DRAWER / APP SHELL ====== */
+/* ====== APP SHELL ====== */
 .app-shell {
   --menu-radius: 16px;
 }
@@ -206,7 +206,7 @@
   letter-spacing: .4px;
 }
 
-/* nav links as cute pills */
+/* nav links */
 .nav-link {
   display: flex;
   align-items: center;
