@@ -49,8 +49,6 @@ public class UserProfileService {
         if (k == null) return null;
 
         String rola = k.getRola() != null ? k.getRola().name() : "-";
-
-        // email u Ciebie jest w tabeli administrator, więc dla reszty dajemy null
         String email = null;
 
         return switch (k.getRola()) {
