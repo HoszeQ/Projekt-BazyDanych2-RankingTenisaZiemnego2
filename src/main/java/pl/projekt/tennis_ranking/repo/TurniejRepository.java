@@ -13,7 +13,7 @@ public interface TurniejRepository extends JpaRepository<Turniej, String> {
 
     boolean existsBySezonAndRanga(int sezon, String ranga);
 
-    // ✅ sezon helpers
+    // sezon helpers
     Optional<Turniej> findTopByOrderBySezonDesc();
 
     List<Turniej> findBySezonOrderByStatusAscNazwaAsc(int sezon);

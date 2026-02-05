@@ -26,11 +26,11 @@ public class PunktyTurniejowe {
     @Column(name = "punkty", nullable = false)
     private int punkty;
 
-    // ✅ opis etapu / za co punkty (np. "Udział (R1)", "Awans -> R2", "Mistrz")
+    // opis etapu / za co punkty (np. "Udział (R1)", "Awans -> R2", "Mistrz")
     @Column(name = "opis", length = 120)
     private String opis;
 
-    // ✅ do sortowania historii na profilu zawodnika
+    // do sortowania historii na profilu zawodnika
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 

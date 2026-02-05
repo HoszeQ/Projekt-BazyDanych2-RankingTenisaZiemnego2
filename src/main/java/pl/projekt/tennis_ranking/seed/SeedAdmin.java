@@ -23,7 +23,7 @@ CommandLineRunner seed(KontoRepository repo, PasswordEncoder encoder) {
     return args -> {
         var konto = repo.findByLogin("admin").orElseGet(() -> {
             Konto k = new Konto();
-            k.setIdKonta("ACC_A1"); // możesz zostawić stałe
+            k.setIdKonta("ACC_A1"); // mozna zostawic
             k.setLogin("admin");
             k.setRola(Rola.ADMIN);
             k.setEnabled(true);

@@ -109,8 +109,7 @@ public class UserAdminService {
                 kibicRepo.save(k);
             }
             case ADMIN -> {
-                // Na razie admin jest seedowany. Później można dodać tabelę administrator też przez service.
-                // Jeśli masz tabelę administrator w DB i chcesz, dopiszemy analogicznie.
+                // Na razie admin jest seedowany.
             }
         }
     }

@@ -39,7 +39,7 @@ public class MainLayout extends AppLayout {
         menu.addClassName("drawer");
         menu.setWidthFull();
 
-        // cute profile card
+        // profile card
         menu.add(profileCard(profileService));
 
         // sections + links
@@ -110,7 +110,6 @@ public class MainLayout extends AppLayout {
 
         info.add(name, roleSpan);
 
-        // mini lines (cute, ale praktyczne)
         Div mini = new Div();
         mini.getStyle().set("margin-top", "10px");
 

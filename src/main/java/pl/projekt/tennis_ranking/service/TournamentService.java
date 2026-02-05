@@ -146,7 +146,6 @@ public class TournamentService {
     }
 
     // ===================== DRABINKA + PUNKTY RACE =====================
-    // (Twoja logika bez zmian — zostawiam jak miałeś, tylko poniżej dołożyłem poprawkę finals i FK)
 
     @Transactional
     public void zamknijZapisyIGenerujDrabinke(String idTurnieju) {
@@ -342,7 +341,7 @@ public class TournamentService {
 
         Turniej finals = new Turniej();
         finals.setIdTurnieju(id20());
-        finals.setIdOrganizatora(org.getIdOrganizatora()); // ✅ tu musi iść ID z tabeli organizator
+        finals.setIdOrganizatora(org.getIdOrganizatora()); // tu musi iść ID z tabeli organizator
         finals.setNazwa("ATP FINALS " + sezon);
         finals.setRanga("ATP_FINALS");
         finals.setSezon(sezon);
@@ -370,7 +369,7 @@ public class TournamentService {
         zawodnikRepo.saveAll(all);
     }
 
-    // ===================== PUNKTY (Twoja logika) =====================
+    // ===================== PUNKTY =====================
 
     private void ensureStagePoints(Turniej t, String idZawodnika, int rounds, int roundReached, String opis) {
         if (idZawodnika == null) return;
