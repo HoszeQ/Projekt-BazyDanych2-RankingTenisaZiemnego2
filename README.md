@@ -112,17 +112,15 @@ src/main/
 | Warstwa | Technologia |
 |---|---|
 | Backend | Java 17+, Spring Boot 3.x |
-| UI Framework | **Vaadin Flow** |
+| UI Framework | Vaadin Flow |
 | Baza danych | MySQL (XAMPP) |
 | ORM | Spring Data JPA / Hibernate |
 | Bezpieczeństwo | Spring Security |
 | Build | Maven |
 
-> **Vaadin Flow** to framework pozwalający budować cały interfejs użytkownika w Javie — bez pisania HTML/CSS/JS ręcznie. Framework generuje frontend automatycznie, co wyjaśnia wysoką zawartość JavaScript w statystykach repozytorium (to kod samego Vaadina, nie pisany ręcznie).
-
 ---
 
-## 🗄️ Model danych
+## Model danych
 
 System oparty jest na relacyjnej bazie danych z następującymi kluczowymi encjami:
 
@@ -137,7 +135,7 @@ Schemat bazy danych dostępny w pliku [`tennis_ranking.sql`](tennis_ranking.sql)
 
 ---
 
-## ⚙️ Uruchomienie
+## Uruchomienie
 
 ### Wymagania
 
@@ -219,6 +217,6 @@ Projekt zrealizowany w ramach kursu **Bazy Danych 2**. Obejmuje:
 
 ---
 
-## 👤 Autor
+## Autor
 
 **HoszeQ** — [github.com/HoszeQ](https://github.com/HoszeQ)
